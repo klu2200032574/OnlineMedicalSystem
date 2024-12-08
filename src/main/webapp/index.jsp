@@ -1,5 +1,7 @@
+<%@page import="com.db.DBConnect"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +9,18 @@
 <title>Index Page</title>
 <%@include file="component/allcss.jsp" %>
 
-
 <style type="text/css">
 .paint-card {
-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
-
 </head>
 <body>
 <%@include file="component/navbar.jsp" %>
 
-	
+
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -47,55 +49,103 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 </div>
 
 <div class="container p-3">
-<p class="text-center fs-2 ">Key Features of our Hospital</p>
+    <p class="text-center fs-2">Key Features of our Hospital</p>
+    <div class="row g-4">
+        <!-- Feature Cards -->
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">100% Safety</p>
+                    <p>Immediate medical attention for urgent health issues.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">Clean Environment</p>
+                    <p>Proper disposal and recycling of waste materials neatly.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">Friendly Doctors</p>
+                    <p>Treatment and consultations without an overnight stay.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">Medical Research</p>
+                    <p>Advanced equipment for X-rays, MRIs, and CT scans.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">24/7 Emergency Care</p>
+                    <p>Round-the-clock services for all medical emergencies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card paint-card">
+                <div class="card-body">
+                    <p class="fs-5">Modern Facilities</p>
+                    <p>State-of-the-art infrastructure for patient comfort and safety.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="contamer p-2">
+<p class="text-center fs-2 ">Our Team</p>
 <div class="row">
-<div class="col-md-8 p-5">
-<div class="row">
-<div class="col-md-6">
+<div class="col-md-3">
 <div class="card paint-card">
-<div class="card-body">
-<p class="fs-5">100% Safety</p>
-<p>Immediate medical attention for urgent health issues.</p>
-
+<div class="card-body text-center">
+<img src="img/doc1.jpeg" width="256px" height="300рх">
+<p class="fw-bold fs-5">Samuani Simi</p>
+<p class="fs-7"> (CEO & Chairman) </p>
 </div>
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
 <div class="card paint-card">
-<div class="card-body">
-<p class="fs-5">Clean Environment</p>
-<p>Proper disposal and recycling of waste materials neatly.</p>
-
+<div class="card-body text-center">
+<img src="img/doc2.jpg" width="250px" height="300рx">
+<p class="fw-bold fs-5">Dr.Siva Kumar</p>
+<p class="fs-7">(Chief Doctor)</p>
 </div>
 </div>
 </div>
-<div class="col-md-6 mt-2">
+<div class="col-md-3">
 <div class="card paint-card">
-<div class="card-body">
-<p class="fs-5">Friendly Doctors</p>
-<p>Treatment and consultations without an overnight stay.</p>
-
+<div class="card-body text-center">
+<img src="img/doc3.jpg" width="250px" height="300рx">
+<p class="fw-bold fs-5">Dr. Niuise Paule</p>
+<p class="fs-7">(Chief Doctor)</p>
 </div>
 </div>
 </div>
-<div class="col-md-6 mt-2">
+<div class="col-md-3">
 <div class="card paint-card">
-<div class="card-body">
-<p class="fs-5">Medical Research</p>
-<p>Advanced equipment for X-rays, MRIs, and CT scans.</p>
-
-
-
-
+<div class="card-body text-center">
+<img src="img/doc4.jpg" width="250px" height="300px">
+<p class="fw-bold fs-5">Dr. Mathue Samuel</p> 
+<p class="fs-7"> (Chief Doctor) </p>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-
-</div>
-</div>
+<%@include file="component/footer.jsp" %>
 
 </body>
 </html>
